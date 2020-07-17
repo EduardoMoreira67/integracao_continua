@@ -9,8 +9,8 @@ test('Testando se o objeto Cliente tem a propriedade nome', () => {
 test('Testando se o objeto Cliente tem a propriedade CPF', () => {
     let cliente = new Cliente()
     cliente.cpf = "123.456.789-00"
-  expect(cliente.cpf).not.toBeUndefined();
-});
+    expect(cliente.validarCPF(cliente.cpf)).toBe(true);
+  });
 
 test('Testando se a propriedade CPF é válida', () => {
     let cliente = new Cliente()
